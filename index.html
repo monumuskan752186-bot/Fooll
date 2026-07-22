@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Monu ❤️ Keerti</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:linear-gradient(135deg,#ff416c,#ff4b2b);
+overflow-x:hidden;
+color:white;
+text-align:center;
+}
+
+.hero{
+padding:50px 20px;
+}
+
+h1{
+font-size:45px;
+margin-bottom:10px;
+animation:zoom 2s infinite alternate;
+}
+
+@keyframes zoom{
+from{transform:scale(1);}
+to{transform:scale(1.08);}
+}
+
+.subtitle{
+font-size:18px;
+opacity:.9;
+margin-bottom:30px;
+}
+
+.container{
+display:flex;
+justify-content:center;
+gap:40px;
+flex-wrap:wrap;
+padding:20px;
+}
+
+.card{
+width:300px;
+background:rgba(255,255,255,.15);
+backdrop-filter:blur(15px);
+border-radius:20px;
+padding:20px;
+box-shadow:0 10px 30px rgba(0,0,0,.3);
+transition:.4s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+}
+
+.card img{
+width:100%;
+height:350px;
+object-fit:cover;
+border-radius:15px;
+}
+
+.name{
+font-size:28px;
+margin-top:15px;
+font-weight:bold;
+}
+
+.love{
+font-size:70px;
+animation:heart 1s infinite;
+}
+
+@keyframes heart{
+0%{transform:scale(1);}
+50%{transform:scale(1.3);}
+100%{transform:scale(1);}
+}
+
+.quote{
+margin-top:40px;
+font-size:22px;
+padding:20px;
+}
+
+.btn{
+display:inline-block;
+margin-top:20px;
+padding:15px 35px;
+background:white;
+color:#ff2e63;
+text-decoration:none;
+font-weight:bold;
+border-radius:40px;
+transition:.4s;
+}
+
+.btn:hover{
+background:#ffe6ec;
+}
+
+footer{
+margin-top:60px;
+padding:20px;
+background:rgba(0,0,0,.2);
+}
+
+.hearts{
+position:fixed;
+width:100%;
+height:100%;
+top:0;
+left:0;
+overflow:hidden;
+pointer-events:none;
+}
+
+.hearts span{
+position:absolute;
+bottom:-100px;
+font-size:25px;
+animation:float 10s linear infinite;
+}
+
+@keyframes float{
+0%{
+transform:translateY(0) rotate(0deg);
+opacity:1;
+}
+100%{
+transform:translateY(-120vh) rotate(360deg);
+opacity:0;
+}
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="hearts">
+<span style="left:10%">❤️</span>
+<span style="left:20%;animation-delay:2s;">💖</span>
+<span style="left:35%;animation-delay:5s;">💕</span>
+<span style="left:50%;animation-delay:1s;">❤️</span>
+<span style="left:70%;animation-delay:4s;">💘</span>
+<span style="left:85%;animation-delay:3s;">💞</span>
+</div>
+
+<section class="hero">
+
+<h1>Monu ❤️ Keerti</h1>
+
+<p class="subtitle">
+A Beautiful Love Story Forever 💖
+</p><div class="container">
+
+<div class="card">
+<img src="https://i.ibb.co/vCtS0Kyt/IMG-20260723-030056-819.jpg" alt="Keerti">
+<div class="name">❤️ Keerti ❤️</div>
+</div>
+
+<div class="love">❤️</div>
+
+<div class="card">
+<img src="https://i.ibb.co/FknW3FmV/Snapchat-1878924817.jpg" alt="Monu">
+<div class="name">❤️ Monu ❤️</div>
+</div>
+
+</div>
+
+<div class="quote">
+<h2>
+"True Love isn't about being together every second,
+it's about staying together no matter what happens."
+</h2>
+
+<a href="#" class="btn">
+❤️ Forever Together ❤️
+</a>
+
+</section>
+
+<footer>
+
+<h2>Made With ❤️ For Monu & Keerti</h2>
+
+<p>
+Every love story is beautiful,
+but yours is my favourite.
+</p>
+
+</footer><script>
+
+// Floating Hearts Generator
+
+setInterval(() => {
+
+const heart = document.createElement("span");
+
+heart.innerHTML = ["❤️","💖","💕","💘","💞"][Math.floor(Math.random()*5)];
+
+heart.style.position="fixed";
+heart.style.left=Math.random()*100+"vw";
+heart.style.bottom="-30px";
+heart.style.fontSize=(20+Math.random()*30)+"px";
+heart.style.pointerEvents="none";
+heart.style.animation="float "+(6+Math.random()*5)+"s linear";
+
+document.querySelector(".hearts").appendChild(heart);
+
+setTimeout(()=>{
+heart.remove();
+},11000);
+
+},500);
+
+
+// Button Effect
+
+document.querySelector(".btn").addEventListener("click",function(e){
+
+e.preventDefault();
+
+alert("❤️ Monu ❤️ Keerti ❤️\n\nForever Together 💖");
+
+});
+
+</script>
+
+</body>
+</html>
